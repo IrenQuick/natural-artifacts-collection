@@ -1,0 +1,558 @@
+@font-face {
+  font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+	font-family: 'Cormorant';
+	src: url('../fonts/Cormorant-Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+	font-family: 'Cormorant';
+	src: url('../fonts/Cormorant-BoldItalic.woff2') format('woff2');
+	font-weight: 700;
+	font-style: italic;
+  font-display: swap;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-width: 1440px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #1d2f30;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+p {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.logo-link {
+  margin-top: 20px;
+}
+
+/* Navigation */
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 165px;
+}
+
+.navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 16px 165px 16px 0;
+}
+
+.navigation-item {
+  margin-right: 50px;
+}
+
+.navigation-item:nth-child(4) {
+  margin-right: 0;
+}
+
+.navigation-link {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 1px 7px;
+}
+
+.navigation-link:hover  {
+  color: #BAE249;
+}
+
+.navigation-link:focus {
+  box-shadow: 0 0 0 2px #83A440;
+}
+
+.navigation-link:active {
+  color: rgb(104, 139, 5);
+}
+
+.navigation-form {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+.navigation-form-item {
+  margin-left: 64px;
+}
+
+.navigation-form-item:first-child {
+  margin-left: 0;
+}
+.form-icon {
+  fill: none;
+  stroke: #BAE249;
+}
+
+.form-icon:hover {
+  stroke: rgb(145, 172, 70);
+}
+
+/* hero */
+
+.hero {
+  width: 100%;
+  background-image: url("../images/backsides/dandelion_bw.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-clip: content-box;
+}
+
+.hero-shade {
+  width: 100%;
+  background-color: rgba(29, 47, 48, 0.7);
+  background-clip: content-box;
+}
+
+.hero-info {
+  margin: 0 165px;
+  padding: 115px 0;
+}
+
+.hero-description {
+  margin-right: 524px;
+}
+
+.hero-header {
+  font-family: 'Cormorant', serif;
+  font-size: 60px;
+  line-height: 60px;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 16px;
+}
+
+.hero-text {
+  margin-bottom: 24px;
+}
+
+.btn-link {
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.hero-button {
+  color: rgb(186, 226, 73);
+}
+
+.hero-button:hover {
+  cursor: pointer;
+  color: rgb(131, 164, 64);
+}
+
+.hero-button:hover .hero-icon{
+  fill:rgb(131, 164, 64);
+}
+
+.arrow-icon {
+  position: absolute;
+  top: 5px;
+  left: 117px;
+}
+
+.hero-icon {
+  fill: rgb(186, 226, 73);
+}
+
+
+/* Popular */
+
+.slider {
+  margin: 60px 165px 57px;
+}
+.popular {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: start;
+  margin-bottom: 26px;
+  position: relative;
+}
+
+.popular-card {
+  min-height: 493px;
+  position: relative;
+  box-shadow: 0 0 0 2px rgb(11, 25, 25);
+}
+
+.card-figure {
+  background-color: rgb(11, 25, 25);
+  padding: 30px 16px;
+  position: relative;
+}
+
+.card-figure::before {
+  content: '';
+  background-color: transparent;
+  display:inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid rgb(137, 157, 157);
+  position: absolute;
+  text-align: center;
+  vertical-align: baseline;
+  top: 16px;
+  left: 16px;
+  font-family: 'Cormorant', serif;
+  font-size: 16px;
+  color: rgb(137, 157, 157);
+  line-height: normal;
+}
+
+.fig-1::before {
+  content: '2.4';
+}
+
+.fig-2::before {
+  content: '3.1';
+}
+
+.fig-3::before {
+  content: '1.2';
+}
+
+.fig-4::before {
+  content: '1.4';
+}
+.card-info {
+  padding: 16px 16px 24px;
+}
+
+.card-header {
+  font-family: 'Cormorant', serif;
+  font-size: 24px;
+  line-height: 36px;
+  padding-bottom: 8px;
+}
+
+.card-text {
+  font-size: 16px;
+  color: #899D9D;
+  padding-bottom: 16px;
+}
+
+.button {
+  font-family: 'Open sans', sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 10.5px 28.5px;
+  bottom: 24px;
+}
+
+.popular-more {
+  position: absolute;
+  background-color: transparent;
+  color: rgb(186, 226, 73);
+  border: 1px solid rgb(186, 226, 73);
+}
+
+.popular-more:hover {
+  background-color: rgb(186, 226, 73);
+  color: rgb(11, 25, 25);
+}
+
+.popular-more:focus {
+  border-width: 5px;
+	border-style: double;
+	border-color: rgb(186, 226, 73);
+}
+
+.popular-more:active {
+  border: none;
+  background-color: rgb(131, 164, 64);
+}
+
+.popular-more:disabled {
+  background-color: rgb(137, 157, 157);
+}
+
+.control-btn-text {
+  font-family: 'Cormorant', serif;
+  font-size: 24px;
+  margin: 0 30px;
+}
+
+.slider-control {
+  display: flex;
+  justify-content: center;
+}
+
+.slider-control-btn {
+  background-color: transparent;
+  border: none;
+  padding: 2px 3px 0 3px;
+}
+
+.control-btn {
+  fill: rgb(137, 157, 157);
+}
+
+.slider-control-btn:hover .control-btn {
+  fill:rgb(186, 226, 73);
+}
+
+.slider-control-btn:focus {
+  outline: 1px solid rgb(186, 226, 73);
+}
+
+.slider-control-btn:active .control-btn {
+  fill: rgb(145, 172, 70);
+}
+
+/* New artefacts */
+
+.new {
+  margin: 0 165px 65px;
+}
+
+.new-container {
+  display: grid;
+  grid-template-columns: 825px 255px;
+  grid-template-rows: 493px;
+  gap: 30px;
+}
+
+.new-artefacts {
+  background-color: rgb(11, 25, 25);
+  padding: 16px;
+}
+
+.new-card {
+  position: relative;
+  background-color: rgb(186, 226, 73);
+}
+
+.new-header {
+  font-family: 'Cormorant';
+  font-size: 48px;
+  line-height: 48px;
+  font-style: italic;
+  margin-bottom: 33px;
+}
+
+.new-art-box {
+  display: inline;
+  position: relative;
+}
+.new-art-box::before {
+  content: '';
+  position: absolute;
+  background-color: transparent;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid rgb(137, 157, 157);
+  text-align: center;
+  font-family: 'Cormorant', serif;
+  font-size: 16px;
+  color: rgb(137, 157, 157);
+  line-height: normal;
+}
+
+.image-small-moss {
+  margin-right: 49px;
+  vertical-align: top;
+}
+
+.icon-small-moss::before {
+  content: '4.2';
+  bottom: 0;
+  left: 0;
+}
+
+.image-big-moss {
+  margin-right: 42px;
+}
+
+.icon-big-moss::before {
+  content: '7.2';
+  bottom: 126px;
+  right: 34px;
+  vertical-align: middle;
+}
+
+.icon-long-wood::before {
+  content: '2.7';
+  left: 132px;
+  bottom: 92px;
+}
+
+.icon-pink-flower::before {
+  content: '5.1';
+  bottom: 67px;
+  left: 142px;
+}
+
+.image-polypody {
+  margin-left: -52px;
+  margin-right: 43px;
+}
+
+.icon-polypody::before {
+  content: '9.1';
+  bottom: 5px;
+  right: 50px;
+}
+
+.image-bark {
+  margin-right: 53px;
+}
+
+.icon-bark::before {
+  content: '1.7';
+  right: 50px;
+}
+
+.icon-close-flower::before {
+  content: '2.3';
+  bottom: 5px;
+  right: 43px;
+}
+
+.new-info {
+  padding: 18px 16px 26px;
+}
+
+.new-info-header {
+  font-family: 'Comorant', serif;
+  color:  rgba(29, 47, 48, 1);
+  padding: 0;
+  margin-bottom: 8px;
+}
+
+.new-info-text {
+  font-family: 'Open Sans', sans-serif;
+  color: rgba(80, 104, 41, 1);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.new-info-text:nth-child(2) {
+  margin-bottom: 16px;
+}
+
+.new-button {
+  position: absolute;
+  color: rgba(11, 25, 25, 1);
+  bottom: 24px;
+}
+
+.new-button:hover {
+  color: #688B05;
+  cursor: pointer;
+}
+
+.new-button:hover .new-icon {
+  fill: #688B05;
+}
+
+.new-icon {
+  fill: rgba(11, 25, 25, 1);
+}
+
+/* Donation */
+
+.donation {
+  width: 100%;
+  background-image: url("../images/backsides/plants_bw.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-clip: content-box;
+}
+
+.donation-shade {
+  width: 100%;
+  background-color: rgba(29, 47, 48, 0.7);
+  background-clip: content-box;
+}
+
+.donation-info {
+  width: 836px;
+  margin: 0 165px;
+  padding: 57px 0 55px;
+}
+
+.donation-header {
+  font-family: 'Cormorant';
+  font-size: 48px;
+  line-height: 48px;
+  font-style: italic;
+  padding: 0 0 19px 0;
+}
+
+.donation-box-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.donation-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  padding-bottom: 19px;
+}
+
+.donation-button {
+  width: 135px;
+  background-color: rgb(186, 226, 73);
+  font-weight: bold;
+  color: rgb(11, 25, 25);
+  border: none;
+}
+
+.field {
+  width: 350px;
+  padding: 11.5px 16px;
+  margin-bottom: 24px;
+}
+/* Footer */
+
+.footer-social-list {
+  list-style-type: none;
+}
