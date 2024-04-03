@@ -102,7 +102,7 @@ h3 {
   color: #BAE249;
 }
 
-.navigation-link:focus {
+.navigation-link:focus-visible {
   box-shadow: 0 0 0 2px #83A440;
 }
 
@@ -181,11 +181,23 @@ h3 {
 
 .hero-button:hover {
   cursor: pointer;
-  color: rgb(131, 164, 64);
+  color: rgb(145, 172, 70);
 }
 
 .hero-button:hover .hero-icon{
-  fill:rgb(131, 164, 64);
+  fill: rgb(145, 172, 70)
+}
+
+.hero-button:active {
+  color: rgb(104, 139, 5);
+}
+
+.hero-button:active .hero-icon{
+  fill:rgb(104, 139, 5);
+}
+
+.hero-button:focus-within .hero-icon {
+  outline: 1px solid rgb(186, 226, 73);
 }
 
 .arrow-icon {
@@ -296,10 +308,8 @@ h3 {
   color: rgb(11, 25, 25);
 }
 
-.popular-more:focus {
-  border-width: 5px;
-	border-style: double;
-	border-color: rgb(186, 226, 73);
+.popular-more:focus-visible {
+  outline: 2px double rgb(186, 226, 73);
 }
 
 .popular-more:active {
@@ -336,7 +346,7 @@ h3 {
   fill:rgb(186, 226, 73);
 }
 
-.slider-control-btn:focus {
+.slider-control-btn:focus-visible {
   outline: 1px solid rgb(186, 226, 73);
 }
 
@@ -541,18 +551,97 @@ h3 {
 .donation-button {
   width: 135px;
   background-color: rgb(186, 226, 73);
-  font-weight: bold;
+  font-family: 'Open sans', sans-serif;
+
   color: rgb(11, 25, 25);
   border: none;
 }
 
+.donation-button:hover {
+  background-color: rgb(145, 172, 70);
+  cursor: pointer;
+}
+
+.donation-button:focus-visible {
+  outline: 3px double rgb(11, 25, 25);
+}
+
+.donation-button:active {
+  background-color: rgb(104, 139, 5);
+}
+
+.donation-button:disabled {
+  background-color: rgb(137, 157, 157);
+}
+
 .field {
-  width: 350px;
+  width: 328px;
   padding: 11.5px 16px;
   margin-bottom: 24px;
+  border: none;
 }
+
+.field:hover {
+  background-color: rgb(137, 157, 157);
+  cursor: pointer;
+}
+
+.field:hover::placeholder {
+  color: rgb(255, 255, 255);
+}
+
+.field:focus-visible {
+  outline: 1px solid rgb(186, 226, 73);
+}
+
+.field:invalid {
+  outline: 1px solid rgb(226, 73, 73);
+}
+
 /* Footer */
+.page-footer {
+  background-color: rgb(11, 25, 25);
+  padding: 18px 0;
+
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+}
+
 
 .footer-social-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.icon-social-link {
+  display: inline-block;
+  height: 20px;
+  padding: 3px 4px;
+}
+
+.icon-social-link:focus-visible {
+  outline: 1px solid rgb(186, 226, 73);
+}
+
+.social-icon {
+  fill:rgb(137, 157, 157);
+}
+
+.icon-social-link:hover .social-icon {
+  fill:rgb(186, 226, 73);
+}
+
+.icon-social-link:focus-visible {
+  outline: 1px solid rgb(186, 226, 73);
+}
+
+.icon-social-link:active .social-icon{
+  fill: rgb(104, 139, 5);
 }
